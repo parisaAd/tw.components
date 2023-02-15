@@ -37,6 +37,33 @@ function iconSwith (theme){
 themeSwicherBtns.forEach((item) =>{
     item.addEventListener("click" , (e) =>{
         const theme = e.target.dataset.theme;
-       console.log(theme);
+        switch(theme) {
+            case "dark":{
+                document.documentElement.classList.add("dark");
+                localStorage.setItem("theme" , "dark");
+                iconSwith("dark");
+                break;
+            }
+            case "light":{
+                document.documentElement.classList.remove("dark");
+                localStorage.setItem("theme" , "light");
+                iconSwith("light");
+                break;
+            }
+            case "system":{
+                localStorage.removeItem("theme");
+                if (systemThme){
+                    document.documentElement.classList.add("dark");
+                    iconSwith("dark");
+                } else{
+                    document.documentElement.classList.remove("dark");
+                    iconSwith("light");
+                }
+                break;
+
+            }
+            default:break;
+        }
+
     });
 });

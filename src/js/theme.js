@@ -36,7 +36,7 @@ function iconSwith (theme){
 
 themeSwicherBtns.forEach((item) =>{
     item.addEventListener("click" , (e) =>{
-        const theme = e.target.dataset.theme;
+        const theme = e.target.dataset;
        console.log(theme);
     });
 });

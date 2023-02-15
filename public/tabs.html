@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <link rel="stylesheet" href="./build/tailwind.css">
+</head>
+
+<body class="bg-blue-700 flex justify-center items-center h-screen">
+    <div x-data="{tabNO : 1 }" class="max-w-md w-full p-1">
+        <!-- tabs header -->
+        <div class="bg-blue-400 flex justify-between gap-x-2 rounded-xl text-white p-1">
+            <button @click="tabNO = 1" :class="tabNO === 1 ? activeClass : ''" class="p-2 w-full rounded-xl hover:bg-blue-200 
+            focus:ring-2 focus:ring-white
+            focus:outline-none focus:ring-offset-2 focus:ring-offset-blue-400 focus:ring-opacity-50
+            focus:bg-white focus:text-blue-600
+             ">Recent</button>
+            <button @click="tabNO = 2" :class="tabNO === 2 ? activeClass : ''" class="p-2 w-full rounded-xl hover:bg-blue-200
+                focus:ring-2 focus:ring-white
+                focus:outline-none focus:ring-offset-2 focus:ring-offset-blue-400 focus:ring-opacity-50
+                focus:bg-white focus:text-blue-600
+                ">Popular</button>
+            <button @click="tabNO = 3" :class="tabNO === 3 ? activeClass : ''" class="p-2 w-full rounded-xl hover:bg-blue-200
+                focus:ring-2 focus:ring-white
+                focus:outline-none focus:ring-offset-2 focus:ring-offset-blue-400 focus:ring-opacity-50
+                focus:bg-white focus:text-blue-600
+                ">Trending</button>
+        </div>
+        <!-- content -->
+        <div class="bg-white rounded-xl mt-2 p-4 cursor-pointer flex flex-col gap-y-2">
+            <div x-show="tabNO === 1">
+                <div class=" hover:bg-gray-200 rounded-xl p-2">
+                    <p class="font-bold text-sm">Does drinking coffee make you smarter?</p>
+                    <span class="text-xs text-gray-400">5h ago &bull; 5 comments &bull; 2 share</span>
+                </div>
+                <div class=" hover:bg-gray-200 rounded-xl p-2">
+                    <p class="font-bold text-sm">Does drinking coffee make you smarter?</p>
+                    <span class="text-xs text-gray-400">5h ago &bull; 5 comments &bull; 2 share</span>
+                </div>
+            </div>
+            <div x-show="tabNO === 2">
+                <div class=" hover:bg-gray-200 rounded-xl p-2">
+                    <p class="font-bold text-sm">Is tech making coffee better or worse??</p>
+                    <span class="text-xs text-gray-400">5h ago &bull; 5 comments &bull; 2 share</span>
+                </div>
+                <div class=" hover:bg-gray-200 rounded-xl p-2">
+                    <p class="font-bold text-sm">Is tech making coffee better or worse?</p>
+                    <span class="text-xs text-gray-400">5h ago &bull; 5 comments &bull; 2 share</span>
+                </div>
+            </div>
+            <div x-show="tabNO === 3">
+                <div class=" hover:bg-gray-200 rounded-xl p-2">
+                    <p class="font-bold text-sm">Ask Me : 10 answers to your questions about coffee?</p>
+                    <span class="text-xs text-gray-400">5h ago &bull; 5 comments &bull; 2 share</span>
+                </div>
+                <div class=" hover:bg-gray-200 rounded-xl p-2">
+                    <p class="font-bold text-sm">Ask Me : 10 answers to your questions about coffee?</p>
+                    <span class="text-xs text-gray-400">5h ago &bull; 5 comments &bull; 2 share</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+
+</html>

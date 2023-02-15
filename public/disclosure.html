@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <link rel="stylesheet" href="./build/tailwind.css">
+</head>
+
+<body class="bg-blue-700 flex justify-center items-center h-screen">
+    <div class="max-w-md w-full bg-white rounded-xl p-4 flex flex-col gap-y-4">
+        <!-- accordion No.1 -->
+        <div x-data="{tabOne : false}">
+            <!-- header -->
+            <div @click="tabOne =! tabOne"
+                class="bg-blue-600 text-white p-2 rounded-lg flex items-center justify-between cursor-pointer">
+                <span>what is irefund policy ?</span>
+                <svg :class="tabOne ? 'rotate-180' : ''" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="w-5 h-5 transition-all duration-700">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+            </div>
+            <!-- content -->
+            <div x-show="tabOne" class="px-4 pt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+                delectus ut iste,
+                perspiciatis quas
+                eligendi cupiditate? Suscipit fugiat ullam quas? Obcaecati veniam repellendus, consectetur accusamus
+                nostrum
+                dicta facilis minus doloremque.</div>
+        </div>
+
+        <!-- accordion No.2 -->
+        <div x-data="{tabTwo : false}">
+            <!-- header -->
+            <div @click="tabTwo =! tabTwo"
+                class="bg-blue-600 text-white p-2 rounded-lg flex items-center justify-between cursor-pointer">
+                <span>what is irefund policy ?</span>
+                <svg :class="tabTwo ? 'rotate-180' : ''" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    class="w-5 h-5 transition-all duration-700">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+            </div>
+            <!-- content -->
+            <div x-show="tabTwo" class="px-4 pt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+                delectus ut iste,
+                perspiciatis quas
+                eligendi cupiditate? Suscipit fugiat ullam quas? Obcaecati veniam repellendus, consectetur accusamus
+                nostrum
+                dicta facilis minus doloremque.</div>
+        </div>
+    </div>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+
+</html>

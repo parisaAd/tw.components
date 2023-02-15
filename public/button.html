@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Dynamic</title>
+    <link rel="stylesheet" href="./build/tailwind.css">
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="w-56">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus at ipsum autem voluptates
+        quasi eius
+        dignissimos voluptate, vel assumenda alias ad placeat dolore sint, cumque modi, distinctio quaerat esse. Enim?
+    </div>
+    <div x-data="{ isOpen : false }" class="relative">
+        <button @click="isOpen =! isOpen" class="z-10 relative bg-blue-500 text-white px-8 py-4 rounded-lg text-2xl inline-flex items-center
+         focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-white">
+            <span>show more</span>
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6 ml-1">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+
+            </span>
+        </button>
+        <button x-show="isOpen" @click="isOpen = false"
+            class="inset-0 fixed h-full w-full bg-gray-200 opacity-50"></button>
+        <div x-show="isOpen" class="bg-white w-56 rounded-lg overflw-hidden border border-gray-200 mt-2 absolute">
+            <a href="#" class="block p-2 hover:bg-gray-100 ">Account</a>
+            <a href="#" class="block p-2 hover:bg-gray-100 ">Support</a>
+            <a href="#" class="block p-2 hover:bg-gray-100 ">Setting</a>
+        </div>
+    </div>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+
+</html>

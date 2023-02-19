@@ -36,7 +36,7 @@
             <div x-show="isOpen" x-data="{activeTab: 1 , activeClass:'text-blue-500 dark:text-blue-300'}"
                 class="bg-white dark:bg-slate-800 dark:text-white rounded-md w-40 p-2 flex flex-col gap-y-4 absolute top-14 left-44">
                 <a data-theme="light" @click="activeTab = 1" :class="activeTab=== 1 ? activeClass : ''" id="testlight"
-                    class="theme-switcher flex dark:text-white font-medium" href="#">
+                    class="theme-swithcer flex dark:text-white font-medium" href="#">
                     <span class="sun">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 mr-2">
@@ -47,7 +47,7 @@
                     <span>Light</span>
                 </a>
                 <a data-theme="dark" @click="activeTab = 2" :class="activeTab=== 2 ? activeClass : ''"
-                    class="theme-switcher flex dark:text-white font-medium" href="#">
+                    class="theme-swithcer flex dark:text-white font-medium" href="#">
                     <span class="moon">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 mr-2">
@@ -58,7 +58,7 @@
                     <span>Dark</span>
                 </a>
                 <a data-theme="system" @click="activeTab = 3" :class="activeTab=== 3 ? activeClass : ''"
-                    class="theme-switcher flex dark:text-white font-medium" href="#">
+                    class="theme-swithcer flex dark:text-white font-medium" href="#">
                     <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 mr-2">
                             <path stroke-linecap="round" stroke-linejoin="round"
